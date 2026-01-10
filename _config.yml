@@ -52,8 +52,8 @@ plugins:
 # WhatsApp floating button
 # =========================
 whatsapp:
-  enabled: false        # set to false to hide everywhere, on page in front matter "whatsapp: false", 
-  phone: "65XXXXXXXX"  # no +, no spaces
+  enabled: false        # 🔴 REQUIRED to set to false to hide everywhere, on page in front matter "whatsapp: false", 
+  phone: "65XXXXXXXX"  # 🔴 REQUIRED if in use. no +, no spaces,
   
 # =========================
 # 📊 ANALYTICS (OPTIONAL)
