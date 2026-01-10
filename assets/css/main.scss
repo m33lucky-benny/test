@@ -36,3 +36,16 @@
 html {
   outline: 5px solid red !important;
 }
+
+/* DEBUG – remove after testing */
+body::before {
+  content: "main.scss loaded";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+}
