@@ -1,8 +1,10 @@
+{% if site.whatsapp.enabled and page.whatsapp != false %}
 <a
   id="whatsapp-link"
   class="whatsapp-float"
   aria-label="Chat on WhatsApp"
   target="_blank"
+  rel="noopener noreferrer"
 >
   <img
     src="{{ '/assets/icon/wp.svg' | relative_url }}"
@@ -10,11 +12,13 @@
     width="50"
     height="50"
   />
-  </a>
+</a>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const phone = "65XXXXXXXX";
+    const phone = "{{ site.whatsapp.phone }}";
+
+    if (!phone) return;
 
     const pageTitle = document.title;
     const pageUrl = window.location.href;
@@ -28,3 +32,4 @@
     }
   });
 </script>
+{% endif %}
