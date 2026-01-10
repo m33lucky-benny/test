@@ -16,8 +16,8 @@ image: "/assets/images/logo.webp"     # OPTIONAL — used for SEO / social cards
 # url: "https://username.github.io"
 # baseurl: "/repo-name"
 
-url: "https://username.github.io"              # 🔴 REQUIRED — fill before production
-baseurl: "repo name"          # 🔴 Leave empty unless using sub-repo
+url: "https://consultant.ebiya.sg/"              # 🔴 REQUIRED — fill before production
+baseurl: ""          # 🔴 Leave empty unless using sub-repo
 
 # =========================
 # ✍️ AUTHOR / SEO
