@@ -1,24 +1,24 @@
 ---
 ---
 
-@use "../_sass/base/variables";
-@use "../_sass/base/reset";
-@use "../_sass/base/typography";
-@use "../_sass/base/layout";
+@use "base/variables";
+@use "base/reset";
+@use "base/typography";
+@use "base/layout";
 
-@use "../_sass/utilities/helpers";
+@use "utilities/helpers";
 
-@use "../_sass/components/navbar";
-@use "../_sass/components/buttons";
-@use "../_sass/components/forms";
+@use "components/navbar";
+@use "components/buttons";
+@use "components/forms";
 
-@use "../_sass/sections/hero";
+@use "sections/hero";
 
+/* Debug */
 html {
   outline: 5px solid red !important;
 }
 
-/* DEBUG – remove later */
 body::before {
   content: "main.scss loaded";
   position: fixed;
