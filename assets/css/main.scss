@@ -1,18 +1,18 @@
 ---
 ---
 
-@use "base/variables";
-@use "base/reset";
-@use "base/typography";
-@use "base/layout";
+@import "base/variables";
+@import "base/reset";
+@import "base/typography";
+@import "base/layout";
 
-@use "utilities/helpers";
+@import "utilities/helpers";
 
-@use "components/navbar";
-@use "components/buttons";
-@use "components/forms";
+@import "components/navbar";
+@import "components/buttons";
+@import "components/forms";
 
-@use "sections/hero";
+@import "sections/hero";
 
 /* Debug */
 html {
