@@ -49,6 +49,13 @@ plugins:
   - jekyll-sitemap
 
 # =========================
+# WhatsApp floating button
+# =========================
+whatsapp:
+  enabled: true        # set to false to hide everywhere
+  phone: "65XXXXXXXX"  # no +, no spaces
+  
+# =========================
 # 📊 ANALYTICS (OPTIONAL)
 # =========================
 # google_analytics: "G-XXXXXXXXXX"     # GA4 ID
