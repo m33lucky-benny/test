@@ -1,19 +1,74 @@
-// Base layout - minimal
+/* -----------------------------------------
+   1️⃣ Global Variables
+------------------------------------------ */
+:root {
+  --max-width: 1200px;
+}
 
+/* -----------------------------------------
+   2️⃣ Base Layout (Sticky Footer Safe)
+------------------------------------------ */
 body {
-  min-height: 100vh;          // ensures body fills viewport if content is short
-  display: flex;               // enables flexbox layout
-  flex-direction: column;      // stacks header, main, footer vertically
+  min-height: 100vh;          /* full viewport height */
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  flex: 1;                     // grows to fill remaining vertical space
+  flex: 1;                   /* pushes footer to bottom */
 }
 
+/* -----------------------------------------
+   3️⃣ Container (Responsive & Centered)
+------------------------------------------ */
 .container {
-  width: min(1200px, 100%);    // max width with responsive fallback
-  margin-left: auto;           
-  margin-right: auto;          
-  padding-left: 1rem;          // horizontal padding
-  padding-right: 1rem;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;            /* horizontal breathing room */
 }
+
+.container--narrow {
+  max-width: 720px;
+}
+
+/* -----------------------------------------
+   4️⃣ Utilities
+------------------------------------------ */
+.center {
+  text-align: center;
+}
+
+.section {
+  margin: 2.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    margin: 4rem 0;
+  }
+}
+
+// .section {
+//   margin: 4rem 0;             /* consistent vertical rhythm */
+// }
+
+// Base layout - minimal
+
+// body {
+//   min-height: 100vh;          // ensures body fills viewport if content is short
+//   display: flex;               // enables flexbox layout
+//   flex-direction: column;      // stacks header, main, footer vertically
+// }
+
+// main {
+//   flex: 1;                     // grows to fill remaining vertical space
+// }
+
+// .container {
+//   width: min(1200px, 100%);    // max width with responsive fallback
+//   margin-left: auto;           
+//   margin-right: auto;          
+//   padding-left: 1rem;          // horizontal padding
+//   padding-right: 1rem;
+// }
