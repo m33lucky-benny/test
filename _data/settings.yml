@@ -1,29 +1,4 @@
 # =========================
-# 🎨 BRAND COLORS
-# Used in SCSS via site.data.settings.brand.*
-# =========================
-brand:
-  dark1: "#0a0a0a"        # REQUIRED — main background color
-  primary: "#FF10F0"     # REQUIRED — main brand color
-  secondary: "#FF006E"   # OPTIONAL — accent color
-  text: "#F5F5F0"        # REQUIRED — main text color
-  surface1: "#1a1a1a"    # OPTIONAL — cards / navbar background
-  surface2: "#2a2a2a"    # OPTIONAL — alt surface
-  border: "#333333"      # OPTIONAL — borders
-  muted: "#888888"       # OPTIONAL — muted text
-
-  # ❌ REMOVE safely if not used in SCSS
-  # primary2: "#2563eb"
-  # dark2: "#1f2937"
-  # light: "#f9fafb"
-
-  # ❌ Brand-specific colors (safe to delete if unused)
-  # brand_kieron1: "#32CD32"
-  # brand_kieron2: "#FF00FF"
-  # brand_kieron3: "#00813D"
-  # brand_kieron4: "#FFD100"
-
-# =========================
 # 🌐 SOCIAL LINKS
 # Used in footer / header includes
 # =========================
