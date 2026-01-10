@@ -5,27 +5,27 @@
 /* ===================================
    1. Base: variables, reset, typography, layout
 =================================== */
-@use "../sass/base/variables" as vars;
-@use "../sass/base/reset" as reset;
-@use "../sass/base/typography" as type;
-@use "../sass/base/layout" as layout;
+@use "../_sass/base/variables" as vars;
+@use "../_sass/base/reset" as reset;
+@use "../_sass/base/typography" as type;
+@use "../_sass/base/layout" as layout;
 
 /* ===================================
    2. Utilities/helpers
 =================================== */
-@use "../sass/utilities/helpers" as helpers;
+@use "../_sass/utilities/helpers" as helpers;
 
 /* ===================================
    3. Components: buttons, forms
 =================================== */
-@use "../sass/components/buttons" as buttons;
-@use "../sass/components/forms" as forms;
-@use "../sass/components/navbar";
+@use "../_sass/components/buttons" as buttons;
+@use "../_sass/components/forms" as forms;
+@use "../_sass/components/navbar";
 
 /* ===================================
    4. Sections: page blocks
 =================================== */
-@use "../sass/sections/hero" as hero;
+@use "../_sass/sections/hero" as hero;
 
 /* ===================================
    5. Page-specific or override styles
