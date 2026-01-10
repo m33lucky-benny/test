@@ -32,3 +32,7 @@
 =================================== */
 // @use "../sass/sections/footer" as footer;
 // @use "../sass/sections/features" as features;
+
+html {
+  outline: 5px solid red !important;
+}
