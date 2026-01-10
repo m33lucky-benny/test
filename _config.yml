@@ -52,7 +52,7 @@ plugins:
 # WhatsApp floating button
 # =========================
 whatsapp:
-  enabled: true        # set to false to hide everywhere, on page in front matter "whatsapp: false"
+  enabled: false        # set to false to hide everywhere, on page in front matter "whatsapp: false", 
   phone: "65XXXXXXXX"  # no +, no spaces
   
 # =========================
