@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block Jekyll build folders (common GitHub Pages practice)
+Disallow: /_site/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Allow sitemaps
+Sitemap: https://m33lucky-benny.github.io/ebiya-consul/sitemap.xml

@@ -1,0 +1,35 @@
+// Typography - base styles
+
+// Base font variables (use Montserrat as imported in HTML)
+$body-font: 'Montserrat', sans-serif;
+$heading-font: 'Montserrat', sans-serif;
+$base-font-size: 16px;
+$line-height: 1.5;
+
+// Body text
+body {
+  font-family: $body-font;
+  font-size: $base-font-size;
+  line-height: $line-height;
+  
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  font-weight: 600; // semi-bold
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+// Paragraphs
+p {
+  margin: 0 0 1rem 0;
+}
+
+// Links
+a {
+  font-family: $body-font;
+  text-decoration: none;
+  color: inherit;
+}

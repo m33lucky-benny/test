@@ -1,0 +1,45 @@
+// Buttons - reusable component
+
+.button {
+  display: inline-block;
+  font-family: $body-font;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+
+  &--primary {
+    background-color: #ff4081;  // pink, ebiya accent
+    color: #fff;
+
+    &:hover {
+      background-color: darken(#ff4081, 10%);
+    }
+  }
+
+  &--secondary {
+    background-color: #f0f0f0;
+    color: #222;
+
+    &:hover {
+      background-color: darken(#f0f0f0, 10%);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 2px solid #ff4081;
+    color: #ff4081;
+
+    &:hover {
+      background-color: #ff4081;
+      color: #fff;
+    }
+  }
+}

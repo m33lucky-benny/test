@@ -1,0 +1,19 @@
+// Base layout - minimal
+
+body {
+  min-height: 100vh;          // ensures body fills viewport if content is short
+  display: flex;               // enables flexbox layout
+  flex-direction: column;      // stacks header, main, footer vertically
+}
+
+main {
+  flex: 1;                     // grows to fill remaining vertical space
+}
+
+.container {
+  width: min(1200px, 100%);    // max width with responsive fallback
+  margin-left: auto;           
+  margin-right: auto;          
+  padding-left: 1rem;          // horizontal padding
+  padding-right: 1rem;
+}

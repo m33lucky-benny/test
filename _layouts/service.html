@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% include services-schema.html  %}
+{% include whatsapp.html %}
+
+<main id="content">
+  <article class="page">
+    {% if page.title %}
+      <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %}
+    {{ content }}
+  </article>
+</main>

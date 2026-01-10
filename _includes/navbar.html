@@ -1,0 +1,25 @@
+<nav class="navbar" aria-label="Primary navigation">
+  <div class="nav-container">
+
+    <a class="navbar-brand" href="{{ '/' | absolute_url }}">
+      <span class="brand-kieron">Your</span><span class="brand-play">Name</span>
+    </a>
+
+    <!-- SINGLE hamburger button -->
+    <button class="nav-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+      <img src="{{ '/assets/icon/menu.svg' | relative_url }}" alt="menu" class="icon" width="24" height="24">
+    </button>
+
+    <div class="nav-links">
+      {% for item in site.data.settings.nav_items %}
+        <a class="nav-link" href="{{ item.url | relative_url }}">
+          {{ item.title }}
+        </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</nav>
+

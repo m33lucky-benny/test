@@ -1,0 +1,30 @@
+<a
+  id="whatsapp-link"
+  class="whatsapp-float"
+  aria-label="Chat on WhatsApp"
+  target="_blank"
+>
+  <img
+    src="{{ '/assets/icon/wp.svg' | relative_url }}"
+    alt="WhatsApp"
+    width="50"
+    height="50"
+  />
+  </a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const phone = "65XXXXXXXX";
+
+    const pageTitle = document.title;
+    const pageUrl = window.location.href;
+
+    const message = `Hi, I have a question about this:\n${pageTitle}\n${pageUrl}`;
+    const encodedMessage = encodeURIComponent(message);
+
+    const link = document.getElementById("whatsapp-link");
+    if (link) {
+      link.href = `https://wa.me/${phone}?text=${encodedMessage}`;
+    }
+  });
+</script>

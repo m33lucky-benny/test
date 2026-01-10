@@ -1,0 +1,49 @@
+// Hero Section
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 60vh; // large banner, adjusts on smaller screens
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // vertically center content
+  align-items: center;     // horizontally center content
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #fdf0f5; // light pink background, optional
+
+  h1 {
+    font-family: $heading-font;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    color: #555;
+    max-width: 600px;
+  }
+
+  .button {
+    @extend .button;       // reuse button component
+    @extend .button--primary;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+
+    h1 {
+      font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
