@@ -44,7 +44,8 @@ h2 {
 
 // Paragraphs
 p {
-  margin: 0 0 1rem 0;
+  padding-top: 0.25rem;
+  margin-bottom: 0;  // ensures no extra space below
 }
 
 // Links
