@@ -1,0 +1,30 @@
+.site-footer {
+  background: var(--brand-dark);
+  color: var(--brand-surface1);
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.site-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.site-footer-link {
+  display: flex;
+  align-items: center;
+}
+
+.site-footer-icon {
+  width: 18px;
+  height: 18px;
+  pointer-events: auto;
+}
+
+.site-footer-text {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
