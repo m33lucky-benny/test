@@ -3,12 +3,17 @@
 ------------------------------------------ */
 :root {
   --max-width: 1200px;
+  --bg-page: #050505;
+  --bg-main: #0a0a0a;
+  --bg-surface: #111;
+  --border-subtle: #1a1a1a;
 }
 
 /* -----------------------------------------
    2️⃣ Base Layout (Sticky Footer Safe)
 ------------------------------------------ */
 body {
+  background-color: var(--bg-page);
   min-height: 100vh;          /* full viewport height */
   display: flex;
   flex-direction: column;
@@ -16,6 +21,7 @@ body {
 
 main {
   flex: 1;                   /* pushes footer to bottom */
+  background-color: var(--bg-main);    /* main content background */
 }
 
 /* -----------------------------------------
@@ -47,6 +53,10 @@ main {
   .section {
     margin: 4rem 0;
   }
+}
+
+main {
+  outline: 2px solid red;
 }
 
 // .section {
