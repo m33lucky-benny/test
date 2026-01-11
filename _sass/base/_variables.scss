@@ -14,7 +14,7 @@
   --color-secondary: #ff006e; /* hot pink */
 
   /* Text */
-  --color-text: #f5f5f0;
+  --color-text: #f5f5f5;       /* off-white */
   --color-muted: #888888;
 
   /* Surfaces */
@@ -35,20 +35,24 @@
    SCSS Variables (compile-time usage)
    ====================================================== */
 
+/* Core brand */
 $dark-1: #0a0a0a;
 $dark-2: #1f2937;
 $light: #f9fafb;
 
-$primary: #ff10f0;
-$primary-2: #2563eb;
-$secondary: #ff006e;
+$primary: #ff10f0;      /* neon pink */
+$primary-2: #2563eb;    /* blue accent */
+$secondary: #ff006e;    /* hot pink */
 
-$text: #f5f5f0;
+/* Text */
+$color-text: #f5f5f5;   /* off-white */
 $muted: #888888;
 
+/* Surfaces */
 $surface-1: #1a1a1a;
 $surface-2: #2a2a2a;
 
+/* UI */
 $border: #333333;
 
 /* Kieron */
@@ -56,3 +60,7 @@ $kieron-1: #32cd32;
 $kieron-2: #ff00ff;
 $kieron-3: #00813d;
 $kieron-4: #ffd100;
+
+/* Links */
+$color-link: $secondary;      // hot pink
+$color-link-hover: #FF4D94;   // lighter hot pink for hover
