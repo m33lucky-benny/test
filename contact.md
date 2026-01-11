@@ -4,5 +4,20 @@ title: Contact Us
 permalink: /contact/
 ---
 
-{% include contact-form.html %}
+<div class="contact-container">
+  <h2>Contact Us</h2>
+  {% include contact-form.html %}
+  <iframe
+    src="https://docs.google.com/forms/d/1atMcFbaYj6h6DROKXTtECp1igkl5R6nXRW2dXdVuOzM/viewform?embedded=true"
+    width="100%"
+    height="900"
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0"
+    loading="lazy"
+  >
+    Loading…
+  </iframe>
+
+</div>
 
