@@ -36,3 +36,26 @@
   line-height: 1.2;
   color: $color-text;
 }
+
+.site-footer-inner{
+  display: flex;
+  align-items: center;
+  gap: 12px;          /* spacing between icons/text */
+  flex-wrap: wrap;    /* optional: wrap on small screens */
+}
+
+.site-footer-link,
+.footer-email{
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-footer-icon{
+  width: 32px;
+  height: 32px;
+  display: block;     /* removes extra baseline gap under images */
+}
+
+.site-footer-text{
+  margin: 0;
+}
