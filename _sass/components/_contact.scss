@@ -120,3 +120,11 @@
     padding-top: 1.5rem;
   }
 }
+
+.contact-form select {
+  color: #bbb; // placeholder color by default
+}
+
+.contact-form select:valid {
+  color: #fff; // real option selected
+}
