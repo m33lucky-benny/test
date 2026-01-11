@@ -78,7 +78,7 @@ schema: services
   background: #FF10F0;
   color: #fff !important;
   padding: 1.5rem 2rem;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 1.25rem;
   font-weight: bold;
   text-decoration: none;
