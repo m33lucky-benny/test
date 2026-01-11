@@ -1,81 +1,70 @@
 <div class="contact-wrap">
-  <form
-    id="contact-form"
-    action="https://docs.google.com/forms/d/e/1atMcFbaYj6h6DROKXTtECp1igkl5R6nXRW2dXdVuOzM/formResponse"
-    method="POST"
-    target="hidden_iframe"
-    class="contact-form"
-    novalidate
-  >
+  <form
+    id="contact-form"
+    class="contact-form"
+    action="https://docs.google.com/forms/d/e/1atMcFbaYj6h6DROKXTtECp1igkl5R6nXRW2dXdVuOzM/formResponse"
+    method="POST"
+    target="hidden_iframe"
+    novalidate
+  >
 
-    <!-- Honeypot spam field -->
-    <input
-      type="text"
-      name="website"
-      tabindex="-1"
-      autocomplete="off"
-      style="position:absolute;left:-9999px"
-    >
+    <!-- Honeypot (hidden properly) -->
+    <div class="hp-field" aria-hidden="true">
+      <label>
+        Leave this field empty
+        <input
+          type="text"
+          name="website"
+          tabindex="-1"
+          autocomplete="off"
+        >
+      </label>
+    </div>
 
-    <input
-      type="text"
-      name="entry.1655243000"
-      placeholder="Name"
-      required
-    >
+    <input
+      type="text"
+      name="entry.1655243000"
+      placeholder="Name"
+      aria-label="Name"
+      required
+    >
 
-    <input
-      type="email"
-      name="entry.2083704905"
-      placeholder="Email"
-      required
-    >
+    <input
+      type="email"
+      name="entry.2083704905"
+      placeholder="Email"
+      aria-label="Email"
+      required
+    >
 
-    <select name="entry.162991437">
-      <option>Email</option>
-      <option>WhatsApp</option>
-      <option>Instagram</option>
-      <option>TikTok</option>
-    </select>
+    <select
+      name="entry.162991437"
+      aria-label="Preferred contact method"
+      required
+    >
+      <option value="" disabled selected>
+        Preferred contact method
+      </option>
+      <option>Email</option>
+      <option>WhatsApp</option>
+      <option>Instagram</option>
+      <option>TikTok</option>
+    </select>
 
-    <textarea
-      name="entry.1755926505"
-      rows="6"
-      placeholder="Message"
-      required
-    ></textarea>
+    <textarea
+      name="entry.1755926505"
+      rows="6"
+      placeholder="Message"
+      aria-label="Message"
+      required
+    ></textarea>
 
-    <button type="submit" class="submit-btn">
-      Send message
-    </button>
+    <button type="submit" class="submit-btn">
+      Send message
+    </button>
 
-    <div id="form-status" class="form-status"></div>
-  </form>
+    <div id="form-status" class="form-status" aria-live="polite"></div>
+  </form>
 
-  <iframe name="hidden_iframe" style="display:none;"></iframe>
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
 </div>
-
-<script>
-(function () {
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
-  const btn = form.querySelector('.submit-btn');
-
-  if (!form) return;
-
-  form.addEventListener('submit', () => {
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
-    status.className = 'form-status success';
-    status.textContent = "Thank you—message received.";
-    status.style.display = 'block';
-
-    setTimeout(() => {
-      form.reset();
-      btn.disabled = false;
-      btn.textContent = 'Send message';
-    }, 1200);
-  });
-})();
-</script>
