@@ -1,9 +1,7 @@
-// Buttons - reusable component
-
 .button {
   display: inline-block;
   font-family: $body-font;
-  font-weight: 600;
+  font-weight: 600; // semi-bold
   font-size: 1rem;
   line-height: 1.5;
   padding: 0.6rem 1.2rem;
@@ -11,25 +9,27 @@
   border: none;
   cursor: pointer;
   text-align: center;
-  color: black;
-  //text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  color: black; // text color
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 
   &--primary {
-    background-color: #ff4081;  // pink, ebiya accent
-
+    background-color: #ff4081;
+    color: #fff;
 
     &:hover {
-      background-color: darken(#ff4081, 10%);
+      background-color: lighten(#ff4081, 10%);
+      box-shadow: 0 0 10px rgba(255, 64, 129, 0.6); // glow effect
     }
   }
 
   &--secondary {
     background-color: #f0f0f0;
-    
+    color: #222;
 
     &:hover {
-      background-color: darken(#f0f0f0, 10%);
+      background-color: lighten(#f0f0f0, 10%);
+      box-shadow: 0 0 10px rgba(240, 240, 240, 0.6);
     }
   }
 
@@ -41,6 +41,7 @@
     &:hover {
       background-color: #ff4081;
       color: #fff;
+      box-shadow: 0 0 10px rgba(255, 64, 129, 0.6);
     }
   }
 }
