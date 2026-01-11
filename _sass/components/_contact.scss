@@ -1,6 +1,21 @@
 /* ===================================
    CONTACT PAGE (Scoped)
 =================================== */
+/* Hide honeypot correctly */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Placeholder visibility (Chrome-safe) */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #bfbfbf;
+  opacity: 1;
+}
 
 .contact-wrap {
   max-width: 720px;
