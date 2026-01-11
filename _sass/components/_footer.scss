@@ -1,6 +1,10 @@
+/* ======================================================
+   Site Footer
+   ====================================================== */
+
 .site-footer {
-  background: var(--brand-dark);
-  color: var(--brand-surface1);
+  background-color: $dark-1;        // compile-time
+  color: $color-text;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
 }
@@ -27,4 +31,5 @@
   margin: 0;
   font-size: 0.875rem;
   line-height: 1.2;
+  color: $color-text;
 }
