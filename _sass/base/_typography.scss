@@ -28,7 +28,7 @@ h1, h3, h4, h5, h6 {
 // Only h2 padding
 h2 {
   text-align: left;  // aligns the text to the left
-  padding-top: 0.5rem
+  padding-top: 0.5rem;
   font-family: $heading-font;
   font-weight: 600;
   line-height: 1.2;
@@ -36,7 +36,7 @@ h2 {
 
 // Post titles
 .post-title {
-  padding-top: 0.5rem
+  padding-top: 0.5rem;
   text-align: center;
   margin 0 auto;
   font-family: $heading-font;
