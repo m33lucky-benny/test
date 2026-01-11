@@ -11,8 +11,8 @@ description: "SEO-first websites that Google can understand."
   </p>
 
   <div class="index-actions">
-    <a href="/contact/" class="btn btn-primary">Request a quote</a>
-    <a href="/services/" class="btn btn-secondary">View services</a>
+    <a href="/contact/" class="button button--primary">Request a quote</a>
+    <a href="/services/" class="button button--secondary">View services</a>
   </div>
 </section>
 
