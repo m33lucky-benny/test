@@ -22,9 +22,12 @@
 }
 
 .site-footer-icon {
-  width: 18px;
-  height: 18px;
-  pointer-events: auto;
+  height: 32px;
+  width: auto;
+  max-height: 32px;
+  // width: 18px;
+  // height: 18px;
+  // pointer-events: auto;
 }
 
 .site-footer-text {
