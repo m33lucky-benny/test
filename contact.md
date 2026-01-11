@@ -23,6 +23,7 @@ permalink: /contact/
     action="https://formspree.io/f/mykgqeew"
     method="POST"
     class="contact-form"
+    target="hidden_iframe"
     novalidate
   >
     <div class="form-row">
@@ -31,7 +32,7 @@ permalink: /contact/
           Name <span class="required" aria-hidden="true">*</span>
           <span class="sr-only">required</span>
         </label>
-        <input type="text" id="name" name="name" autocomplete="name" required>
+        <input type="text" id="name" name="entry.1655243000" autocomplete="name" required>
       </div>
 
       <div class="form-group">
@@ -39,13 +40,13 @@ permalink: /contact/
           Email <span class="required" aria-hidden="true">*</span>
           <span class="sr-only">required</span>
         </label>
-        <input type="email" id="email" name="_replyto" autocomplete="email" required>
+        <input type="email" id="email" name="entry.2083704905" autocomplete="email" required>
       </div>
     </div>
 
     <div class="form-group">
       <label for="contact-method">Preferred contact method</label>
-      <select id="contact-method" name="contact_method">
+      <select id="contact-method" name="entry.162991437">
         <option value="email">Email</option>
         <option value="whatsapp">WhatsApp</option>
         <option value="instagram">Instagram</option>
@@ -58,7 +59,7 @@ permalink: /contact/
         Message <span class="required" aria-hidden="true">*</span>
         <span class="sr-only">required</span>
       </label>
-      <textarea id="message" name="message" rows="7" required></textarea>
+      <textarea id="message" name="entry.1755926505" rows="7" required></textarea>
     </div>
 
     <input type="hidden" name="_subject" value="New contact from ebiya.sg">
