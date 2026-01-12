@@ -63,7 +63,7 @@
     }
   }
 
-&.extra:hover:not(:disabled) {
+&.glow:hover:not(:disabled) {
   background: var(--primary);
   color: var(--dark1);
   box-shadow: 
@@ -72,11 +72,11 @@
   transform: translateY(-2px);
 }
 
-&.extra:active {
+&.glow:active {
   transform: translateY(0);
 }
 
-&.extra[disabled] {
+&.glow[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
   box-shadow: none;
