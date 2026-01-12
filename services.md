@@ -43,15 +43,6 @@ schema: services
       <small>Detailed Waterfall Analysis</small>
     </a>
 
-    <a
-      href="https://www.webpagetest.org/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="tool-btn"
-    >
-      🚀 WebPageTest
-      <small>Global Test Locations</small>
-    </a>
   </div>
 
   <!-- RESULTS -->
