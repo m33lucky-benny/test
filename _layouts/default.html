@@ -48,5 +48,8 @@
   {% include footer.html %}
 
   <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  {% if page.permalink == "/contact/" %}
+  <script src="{{ '/assets/js/contact-form.js' | relative_url }}" defer></script>
+{% endif %}
 </body>
 </html>
