@@ -157,3 +157,9 @@
   text-align: left;
 }
 
+.hidden-iframe {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: 0 !important;
+}
