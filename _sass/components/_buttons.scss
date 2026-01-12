@@ -62,4 +62,23 @@
         0 0 60px #ff4081; // same neon glow as primary
     }
   }
+
+&.extra:hover:not(:disabled) {
+  background: var(--primary);
+  color: var(--dark1);
+  box-shadow: 
+    0 0 20px var(--primary),
+    0 0 40px var(--secondary);
+  transform: translateY(-2px);
+}
+
+&.extra:active {
+  transform: translateY(0);
+}
+
+&.extra[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
 }
