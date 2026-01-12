@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
+  const iframe = document.getElementById('hidden_iframe');
+  let isSubmitting = false;
+
   let lastSubmitTime = 0;
   const SUBMIT_COOLDOWN = 3000; // 3 seconds
 
@@ -34,10 +37,34 @@ document.addEventListener('DOMContentLoaded', function () {
       return false;
     }
 
+    /* =========================
+       STEP 5: Input sanitization (XSS)
+    ========================= */
     sanitizeFormInputs(form);
 
+    /* =========================
+       STEP 6: Hidden iframe submission lock
+    ========================= */
+    isSubmitting = true;
     lastSubmitTime = now;
   });
+
+  /* =========================
+     STEP 6 (continued):
+     Detect successful iframe submission
+  ========================= */
+  if (iframe) {
+    iframe.addEventListener('load', function () {
+      if (!isSubmitting) return;
+
+      // Submission completed inside iframe
+      isSubmitting = false;
+
+      // Optional hooks (safe to leave empty)
+      // form.reset();
+      // console.log('Form submitted successfully');
+    });
+  }
 
   /* =========================
      Validation helpers
@@ -49,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const contact = form.querySelector('select[name="entry.162991437"]');
     const message = form.querySelector('textarea[name="entry.1755926505"]');
 
-    // Block empty fields
     if (
       !name.value.trim() ||
       !email.value.trim() ||
@@ -59,13 +85,11 @@ document.addEventListener('DOMContentLoaded', function () {
       return false;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.value)) {
       return false;
     }
 
-    // Name validation (letters, spaces, hyphens, apostrophes only)
     const nameRegex = /^[A-Za-z\s\-']+$/;
     if (!nameRegex.test(name.value)) {
       return false;
@@ -89,7 +113,10 @@ document.addEventListener('DOMContentLoaded', function () {
     div.textContent = value;
     let clean = div.innerHTML;
 
-    clean = clean.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+    clean = clean.replace(
+      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+      ''
+    );
     clean = clean.replace(/javascript:/gi, '');
     clean = clean.replace(/on\w+\s*=/gi, '');
     clean = clean.replace(/<iframe|<object|<embed/gi, '');
@@ -98,37 +125,3 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 </script>
-
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   const form = document.getElementById('contact-form');
-//   if (!form) return;
-
-//   let lastSubmitTime = 0;
-//   const SUBMIT_COOLDOWN = 3000; // 3 seconds
-
-//   form.addEventListener('submit', function (e) {
-//     /* =========================
-//        Honeypot check
-//     ========================= */
-
-//     const honeypot = form.querySelector('input[name="website"]');
-//     if (honeypot && honeypot.value !== '') {
-//       e.preventDefault();
-//       return false;
-//     }
-
-//     /* =========================
-//        Rate limiting
-//     ========================= */
-
-//     const now = Date.now();
-//     if (now - lastSubmitTime < SUBMIT_COOLDOWN) {
-//       e.preventDefault();
-//       return false;
-//     }
-
-//     lastSubmitTime = now;
-//   });
-// });
