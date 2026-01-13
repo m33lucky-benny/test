@@ -27,11 +27,16 @@
 
   <!-- Main CSS (non-blocking) -->
   <link rel="preload"
+      href="{{ '/assets/css/main.css' | relative_url }}"
+      as="style">
+  <link rel="stylesheet"
+      href="{{ '/assets/css/main.css' | relative_url }}">
+  <!-- <link rel="preload"
         href="{{ '/assets/css/main.css' | relative_url }}"
         as="style"
         onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <noscript> -->
+    <!-- <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"> -->
   </noscript>
 
   <!-- Google Fonts fallback (loads if local font not available) -->
