@@ -1,4 +1,3 @@
-<script>
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -132,4 +131,3 @@ document.addEventListener('DOMContentLoaded', function () {
     return clean.trim();
   }
 });
-</script>
