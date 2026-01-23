@@ -1,5 +1,4 @@
 <head>
-   {% include csp.html %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -7,6 +6,11 @@
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts (CSP-safe) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+    rel="stylesheet">
 
   <!-- Google Search Console -->
   <meta name="google-site-verification" content="ULsSS9SW0O2t0d76FM20iITO83i9vbTNtTVclZiV7mM">
@@ -31,7 +35,6 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
   <!-- External JS only (CSP-safe) -->
-  <script src="/assets/js/fonts-loader.js" defer></script>
   <script src="/assets/js/ga-lazy.js" defer></script>
   <script src="/assets/js/contact-form.js" defer></script>
 
